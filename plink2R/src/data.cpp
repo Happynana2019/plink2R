@@ -3,6 +3,10 @@
 
 #include <fcntl.h>
 #include <stdexcept>
+#include <sys/time.h>
+#include <stdlib.h>
+#define srand48(x) srand((int)(x))
+#define drand48() ((double)rand()/(RAND_MAX + 1.0))
 
 Data::Data(const char* bedfile, const char* famfile, bool verbose)
 {
